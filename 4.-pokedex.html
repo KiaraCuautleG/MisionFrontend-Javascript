@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex LaunchX</title>
+    <link rel="stylesheet" href="./poledex.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Pokedex LaunchX</h1>
+   
+    
+    
+    <section>
+        <div class="containerPokedexLeft">
+            <div class="pokedex">
+                <div class="pokedexTop">
+                    <div class="circleBig">
+                        <div class="circleBlue">
+                            <div class="circleReflection">
+    
+                            </div>
+                        </div>
+                    </div>
+                    <div class="circleSmall1">
+                        <div>
+                            <div></div>
+                        </div>
+                    </div>
+                    <div class="circleSmall2">
+                        <div>
+                            <div></div>
+                        </div>
+                    </div>
+                    <div class="circleSmall2">
+                        <div>
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pokedexBotton">
+                    <div>
+                        <span class="pokeName" id="namePoke">Pokemon</span>
+                    </div>
+                    <div class="containerPokemons">
+                        <img src="./pokebola.png" alt="Pokemon" id="pokeImg" width="150px">
+                    </div>
+                    <div class="bottomButtons">
+                        <div class="buttons1">
+                            <div class="buttonCircle">
+                                <div></div>
+                            </div>
+                            <div class="rectangle1"></div>
+                            <div class="rectangle2"></div>
+                        </div>
+                        <div class="inputNamePokemon">
+                            <input class="inputPokemon" type="text" placeholder="pikachu" id="pokeName" name="pokeName">
+                        </div>
+                        <div class="directions">
+                            <div class="top"></div>
+                            <div class="right"></div>
+                            <div class="botton"></div>
+                            <div class="left"></div>
+                            <div class="center">
+                                <button class="buttonPokemon" onclick="fetchPokemon()"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pokedexRight">
+                    <div class="pokedexLine">
+                    </div>
+                    <div class="pokedexLine2">
+
+                    </div>
+                </div>
+    
+            </div>
+        </div>
+        <div class="containerPokedexRight">
+            <div class="pokedexRightRefletion">
+                <div class="dataPokemon">
+                    <div class="typeID">
+                        <div>
+                            <span>Tipo: </span>
+                            <span id="type"></span>
+                        </div>
+                        <div>
+                            <span>ID: </span>
+                            <span id="id"></span>
+                        </div>     
+                    </div>
+                    <div class="containerStats">
+                        <div class="stats">
+                            <span>HP</span>
+                            <span id="hp"></span>
+                        </div>
+                        <div class="stats">
+                            <span>At</span>
+                            <span id="at"></span>
+                        </div>
+                        <div class="stats">
+                            <span>Df</span>
+                            <span id="df"></span>
+                        </div>
+                        <div class="stats">
+                            <span>At E</span>
+                            <span id="atE"></span>
+                        </div>
+                        <div class="stats">
+                            <span>Df E</span>
+                            <span id="dfE"></span>
+                        </div>
+                        <div class="stats">
+                            <span>V</span>
+                            <span id="velocidad"></span>
+                        </div>
+                    </div>
+                    <div class="blueKeys">
+                        <div class="rowblueKeys">
+                            <div class="topLeft"></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div class="topRight"></div>
+                        </div>
+                        <div class="rowblueKeys">
+                            <div class="bottonLeft"></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div class="bottonRight"></div>
+                        </div>
+                    </div>
+                    <div class="graysKeys">
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div></div>
+                    <div class="weightPoke">
+                        <span>Peso: </span>
+                        <span id="wight"></span>
+                        <span>Altura: </span>
+                        <span id="height"></span>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+</body>
+<footer>
+    <script src="./4.-pokedex.js"></script>
+</footer>
+</html>

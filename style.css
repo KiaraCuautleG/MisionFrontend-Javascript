@@ -1,0 +1,375 @@
+body{
+    background-image: url("fondo2.jpg");
+}
+section{
+    display: flex;
+    flex-direction: column;
+}
+.containerPokedexLeft{
+    background: rgb(148, 33, 33);
+    width: 420px;
+    height: 600px;
+    border-radius: 40px 10px 10px 30px;
+    margin: auto;
+   
+}
+.pokedex{
+    display: grid;
+    grid-template-columns: 1fr 60px;
+    grid-template-rows: 100px 1fr;
+    background: rgb(218, 10, 37);
+    width: 96%;
+    height: 600px;
+    border-radius: 40px 10px 10px 30px;
+    margin-left: 25px;
+}
+.pokedexTop{
+    grid-column: 1/2;
+    grid-row: 1/2;
+    display: flex;
+    flex-direction: row;
+    box-shadow: 5px 10px rgb(148, 33, 33);
+    border-bottom-right-radius: 80%;
+    margin-top: 0px;
+}
+.circleBig{
+    width: 50px;
+    height: 50px;
+    background: #ffff;
+    border-radius: 50%;
+    margin-top:20px ;
+    margin-left: 20px;
+    padding: 5px;
+    margin-bottom: 20px;
+}
+.circleBig .circleBlue{
+    width: 40px;
+    height: 40px;
+    background: rgb(133, 200, 233);
+    border-radius: 50%;
+    margin-top: 5px;
+    margin-left: 7px;
+}
+.circleReflection{
+    width: 20px;
+    height: 20px;
+    background: #ffff;
+    opacity: 0.8;
+    border-radius: 50%;
+    margin-top: 10px;
+    margin-left: 15px;
+}
+.circleSmall1, .circleSmall2{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-left: 10px;
+    margin-top:20px ;
+}
+.circleSmall1{
+    background: red;
+}
+.circleSmall2{
+    background: yellow;
+}
+.circleSmall1 div, .circleSmall2 div{ 
+    width: 25px;
+    height: 25px;
+    background: rgb(63, 62, 62);
+    border-radius: 50%;
+    margin-left: 4px;
+    margin-top: 5px;
+    opacity: 0.4;
+}
+.circleSmall1 div div, .circleSmall2 div div{
+    width: 15px;
+    height: 15px;
+    background: rgb(248, 245, 245);
+    border-radius: 50%;
+    margin-left: 4px;
+    margin-top: 5px;
+}
+.pokedexBotton{
+    grid-column: 1/3;
+    grid-row: 2/3;
+    width: 320px;
+    height: 95%;
+    background: rgb(196, 10, 50);
+    border-radius: 20px;
+    margin: 10px;
+    text-align: center;
+    border: 2px solid rgb(148, 33, 33);
+}
+.pokeName{
+    font-size: 25px;
+    color: #ffff;
+    width: 200px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.containerPokemons{
+    width: 280px;
+    height: 220px;
+    background: rgb(180, 206, 230);
+    margin: 30px auto;
+    box-shadow: -10px 8px rgb(119, 113, 113);
+    border-radius: 15px;
+    text-align: center;
+}
+.containerPokemons img{
+    width: 200px;
+    height: 200px;
+    border: 1px solid #ffff;
+    background: #ffff;
+    margin: auto;
+    border-radius: 5px;
+    margin-top: 10px;
+
+}
+.bottomButtons{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+.bottomButtons .buttons1{
+    display: flex;
+    flex-direction: row;
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+.buttonCircle{
+    width: 50px;
+    height: 50px;
+    background: black;
+    border-radius: 50%;
+}
+.buttonCircle div{
+    width: 40px;
+    height: 40px;
+    background: rgb(88, 86, 86);
+    opacity: 0.7;
+    border-radius: 50%;
+    margin-top: 3px;
+    margin-left: 10px;
+}
+.rectangle1, .rectangle2{
+    width: 60px;
+    height: 10px;
+    
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-left: 15px;
+}
+.rectangle1{
+    background: red;
+}
+.rectangle2{
+    background: blue;
+}
+.inputNamePokemon{
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+.inputPokemon{
+    width: 150px;
+    height: 50px;
+    background: rgb(49, 139, 87);
+    border-style: none;
+    font-size: 20px;
+    margin: auto;
+    color: #ffff;
+}
+.directions{
+    grid-column: 2/3;
+    grid-row: 1/3;
+
+}
+.directions .top,.directions .right,.directions .botton,.directions .left, .center{
+    width: 40px;
+    height: 40px;
+    background: black;
+    margin-top: 20px;
+    margin-left: 30px;
+}
+.directions .top{
+    margin-top: 20px;
+    margin-left: 30px;
+}
+.directions .right{
+    margin-top: 0px;
+    margin-left: 70px;
+}
+.directions .botton{
+    margin-top: 0px;
+    margin-left: 30px;
+}
+.directions .left{
+    margin-top: -80px;
+    margin-left: -10px;
+}
+.directions .center{
+    margin-top: -40px;
+    margin-left: 30px;
+}
+.buttonPokemon{
+    width: 40px;
+    height: 40px;
+    background: rgb(63, 61, 61);
+    border-radius: 50%;
+    border-style: none;
+}
+.pokedexRight{
+    grid-column: 2/3;
+    grid-row: 1/3;
+    width: 57px;
+    height: 96%;
+    background: rgb(218, 10, 37);
+    margin-top: 20px;
+    margin-left: -2px;
+    border: 2px solid rgb(148, 33, 33);
+    border-radius: 15px;
+}
+.pokedexLine, .pokedexLine2{
+    width: 57px;
+    height: 20px;
+    border: 2px solid rgb(148, 33, 33);
+    
+    margin-left: -2px;
+}
+.pokedexLine{
+    margin-top: 40px;
+}
+.pokedexLine2{
+    margin-top: 445px;
+}
+
+/*--------------------------------containerPokedexRight---------------------------------------*/
+.containerPokedexRight{
+    width: 420px;
+    height: 535px;
+    background: rgb(218, 10, 37);
+    border-radius: 0 20% 40px 10px;   
+}
+.pokedexRightRefletion{
+    width: 380px;
+    height: 500px;
+    border: 2px solid rgb(148, 33, 33);
+    box-shadow: 10px -10px rgb(148, 33, 33);
+    border-radius: 5px 20% 40px 10px;   
+    margin-top: 20px;
+    margin-left: 10px;
+}
+.dataPokemon{
+    width: 300px;
+    height: 150px;
+    margin: auto;
+    margin-top: 40px;
+    background: rgb(33, 37, 78);
+    border-radius: 10px;
+}
+.typeID{
+    display: flex;
+    flex-direction: row;
+}
+.typeID div{
+    display: flex;
+    flex-direction: row;
+    margin: 5px;
+    border: 2px solid rgb(81, 82, 173);
+    width: 150px;
+    border-radius: 5px;
+}
+.typeID div span{
+    font-size: 18px;
+    color: yellow;
+}
+.containerStats{
+    display: flex;
+    flex-direction: row;
+}
+.stats{
+    width: 35px;
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid rgb(81, 82, 173);
+}
+.stats span{
+    color: yellow;
+    font-size: 18px;
+    border-bottom: 1px solid #ffff;
+    height: 30px;
+}
+.blueKeys{
+    width: 300px;
+    height: 100px;
+    margin-top: 60px;
+    background: rgb(70, 170, 228);
+    border-radius: 10px;
+    box-shadow: -10px 5px rgb(42, 122, 168);
+}
+.blueKeys .rowblueKeys{
+    display: flex;
+    flex-direction: row;
+    border-radius: 10px;
+    
+}
+.blueKeys div div {
+    width: 60px;
+    height: 47px;
+    border: 2px solid rgb(42, 122, 168);
+    
+}
+.topLeft{
+    border-radius: 5px 0px 0px 0px;
+}
+.topRight{
+    border-radius: 0px 5px 0px 0px;
+}
+.bottonLeft{
+    border-radius: 0px 0px 0px 5px;
+}
+.bottonRight{
+    border-radius: 0px 0px 10px 0px;
+}
+.graysKeys {
+    display: flex;
+    justify-content: end;
+    margin-top: 10px;
+}
+.graysKeys div{
+    width: 60px;
+    height: 10px;
+    background: rgb(53, 50, 50);
+    margin: 5px;
+    border-radius: 15px;
+}
+.weightPoke{
+    width: 250px;
+    height: 30px;
+    background:  rgb(33, 37, 78);
+    border-radius: 15px;
+    color: yellow;
+    font-size: 18px;
+    padding-top: 10px;
+    
+}
+.weightPoke span{
+    margin: 10px;
+    margin-top: 15px;
+}
+@media screen and (min-width:724px){
+    section{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .containerPokedexLeft {
+        width: 420px;
+        margin: 0px;
+    }
+    .containerPokedexRight {
+        width: 420px;
+        margin: 8px;
+        margin-top: 50px;
+    }
+}
