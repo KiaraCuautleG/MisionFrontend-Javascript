@@ -15,8 +15,12 @@ Por defecto, fetch no enviará ni recibirá cookies del servidor, resultando en 
 /*fetch forma de hacer peticiones a una api */
 /*La consulta a un servidor es asincrona se ejecuta en paralelo */
 /*Las promesas se usan para que espere al momento recibir la petición del servidor */
+var music=new Audio("sound/menupokedex.mp3")
+var pokeNameInput = document.getElementById("pokeName");
+var id=0;
 const fetchPokemon = () => {
-    const pokeNameInput = document.getElementById("pokeName");
+    music.play();
+    
     let pokeName = pokeNameInput.value;
     pokeName = pokeName.toLowerCase();
     const url = `https://pokeapi.co/api/v2/pokemon/${pokeName}`;
@@ -39,7 +43,7 @@ const fetchPokemon = () => {
             let pokeImg = data.sprites.front_default;
             let type= data.types[0].type.name;
             let name = data.forms[0].name;
-            let id = data.id;
+                id = data.id;
             let height = data.height;
             let pokeWeight=data.weight;
             let stats = data.stats;
@@ -70,6 +74,131 @@ const fetchPokemon = () => {
         }
     });
 }
+const fetchAfter =() => {
+    
+    //console.log(idpo);
+    if(id>= 1 && id<=150){
+        id = id+1;
+        console.log(id);
+    }else if(id == 0){
+        id = id+ 1;
+        console.log(id);
+    }
+    const url = `https://pokeapi.co/api/v2/pokemon/${id}`;
+
+    /*Se consulta la api de la url */
+    fetch(url).then((res) => {
+        /*Al primer then regresa datos sobre el estatus de la petición del servidor 
+        Todavia es una promesa */
+        if (res.status != "200") {
+            console.log(res);
+            pokeImage("./pikachu.jpg")
+        }
+        else {
+            return res.json();
+        }
+        /*La data de la respuesta */
+    }).then((data) => {
+        if (data) {
+            music.play();
+            console.log(data);
+            let pokeImg = data.sprites.front_default;
+            let type= data.types[0].type.name;
+            let name = data.forms[0].name;
+                id = data.id;
+            let height = data.height;
+            let pokeWeight=data.weight;
+            let stats = data.stats;
+            let hp = data.stats[0].base_stat; 
+            let attact = data.stats[1].base_stat;
+            let defense = data.stats[2].base_stat;
+            let special_attack = data.stats[3].base_stat;
+            let special_defense = data.stats[4].base_stat;
+            let speed = data.stats[5].base_stat;
+
+            console.log("Tipo:" + type);
+            console.log("Nombre: " + name);
+            console.log("ID: " + id);
+            console.log("Altura: " + height);
+            console.log("HP: " + hp);
+            console.log("Ataque: " + attact);
+            console.log("Defensa: " + defense);
+            console.log("Ataque especial: " + special_attack);
+            console.log("Defensa especial: " + special_defense);
+            console.log("Velocidad: " + speed);
+
+            pokemonName(name); 
+            pokemoData(type, id);
+            pokeStats(hp, attact, defense, special_attack, special_defense, speed);
+            pokeWeightHeight(pokeWeight, height);
+            pokeImage(pokeImg);
+            console.log(pokeImg);
+        }
+    });
+}
+const fetchBefore =() => {
+    
+    //console.log(idpo);
+    if(id>= 1 && id<=150){
+        id = id-1;
+        console.log(id);
+        const url = `https://pokeapi.co/api/v2/pokemon/${id}`;
+
+        /*Se consulta la api de la url */
+        fetch(url).then((res) => {
+            /*Al primer then regresa datos sobre el estatus de la petición del servidor 
+            Todavia es una promesa */
+            if (res.status != "200") {
+                console.log(res);
+                pokeImage("./pikachu.jpg")
+            }
+            else {
+                return res.json();
+            }
+            /*La data de la respuesta */
+        }).then((data) => {
+            if (data) {
+                console.log(data);
+                let pokeImg = data.sprites.front_default;
+                let type= data.types[0].type.name;
+                let name = data.forms[0].name;
+                    id = data.id;
+                let height = data.height;
+                let pokeWeight=data.weight;
+                let stats = data.stats;
+                let hp = data.stats[0].base_stat; 
+                let attact = data.stats[1].base_stat;
+                let defense = data.stats[2].base_stat;
+                let special_attack = data.stats[3].base_stat;
+                let special_defense = data.stats[4].base_stat;
+                let speed = data.stats[5].base_stat;
+    
+                console.log("Tipo:" + type);
+                console.log("Nombre: " + name);
+                console.log("ID: " + id);
+                console.log("Altura: " + height);
+                console.log("HP: " + hp);
+                console.log("Ataque: " + attact);
+                console.log("Defensa: " + defense);
+                console.log("Ataque especial: " + special_attack);
+                console.log("Defensa especial: " + special_defense);
+                console.log("Velocidad: " + speed);
+    
+                pokemonName(name); 
+                pokemoData(type, id);
+                pokeStats(hp, attact, defense, special_attack, special_defense, speed);
+                pokeWeightHeight(pokeWeight, height);
+                pokeImage(pokeImg);
+                console.log(pokeImg);
+            }
+        });
+
+    }else if(id == 0){
+        id = id;
+        console.log(id);
+    }
+   
+}
 
 const pokeImage = (url) => {
     const pokePhoto = document.getElementById("pokeImg");
@@ -94,10 +223,10 @@ const pokeStats = (hp, attact, defense, special_attack, special_defense, speed) 
     document.getElementById("velocidad").innerHTML = speed;
 }
 const pokeWeightHeight = (weight, height) =>{
-    let pokemonWeight = weight/1000;
+    let pokemonWeight = weight/100;
     let pokemonHeight = height/10;
-    document.getElementById("wight").innerHTML = pokemonWeight; 
-    document.getElementById("height").innerHTML = pokemonHeight; 
+    document.getElementById("wight").innerHTML = pokemonWeight + " kg"; 
+    document.getElementById("height").innerHTML = pokemonHeight + " m"; 
 }
 
 

@@ -1,9 +1,18 @@
 body{
-    background-image: url("fondo2.jpg");
+    background-image: url("fondo.jpg");
+    max-width: 100%;
+    background-size: cover;
+    font-family: 'Courier New', Courier, monospace;
 }
 section{
     display: flex;
     flex-direction: column;
+}
+h1{
+    color: yellow;
+    font-size: 40px;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
 }
 .containerPokedexLeft{
     background: rgb(148, 33, 33);
@@ -217,6 +226,12 @@ section{
     border-radius: 50%;
     border-style: none;
 }
+.buttonAfter, .buttonBefore{
+    width: 40px;
+    height: 40px;
+    background: black;
+    border-style: none;
+}
 .pokedexRight{
     grid-column: 2/3;
     grid-row: 1/3;
@@ -287,15 +302,15 @@ section{
     flex-direction: row;
 }
 .stats{
-    width: 35px;
-    margin: 5px;
+    width: 39px;
+    margin: 3px;
     display: flex;
     flex-direction: column;
     border: 2px solid rgb(81, 82, 173);
 }
 .stats span{
     color: yellow;
-    font-size: 18px;
+    font-size: 16px;
     border-bottom: 1px solid #ffff;
     height: 30px;
 }
@@ -344,17 +359,17 @@ section{
     border-radius: 15px;
 }
 .weightPoke{
-    width: 250px;
+    width: 300px;
     height: 30px;
     background:  rgb(33, 37, 78);
     border-radius: 15px;
     color: yellow;
-    font-size: 18px;
+    font-size: 16px;
     padding-top: 10px;
     
 }
 .weightPoke span{
-    margin: 10px;
+    margin: 5px;
     margin-top: 15px;
 }
 @media screen and (min-width:724px){
