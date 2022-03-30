@@ -16,7 +16,7 @@ h1{
 }
 .containerPokedexLeft{
     background: rgb(148, 33, 33);
-    width: 400px;
+    width: 380px;
     height: 600px;
     border-radius: 40px 10px 10px 30px;
 }
@@ -239,39 +239,20 @@ h1{
     border-style: none;
 }
 .pokedexRight{
-    grid-column: 2/3;
-    grid-row: 1/3;
-    width: 57px;
-    height: 96%;
-    background: rgb(218, 10, 37);
-    margin-top: 20px;
-    margin-left: -2px;
-    border: 2px solid rgb(148, 33, 33);
-    border-radius: 15px;
+  
+    display: none;
 }
-.pokedexLine, .pokedexLine2{
-    width: 57px;
-    height: 20px;
-    border: 2px solid rgb(148, 33, 33);
-    
-    margin-left: -2px;
-}
-.pokedexLine{
-    margin-top: 40px;
-}
-.pokedexLine2{
-    margin-top: 445px;
-}
+
 
 /*--------------------------------containerPokedexRight---------------------------------------*/
 .containerPokedexRight{
-    width: 400px;
+    width: 380px;
     height: 535px;
     background: rgb(218, 10, 37);
     border-radius: 0 20% 40px 10px;   
 }
 .pokedexRightRefletion{
-    width: 360px;
+    width: 350px;
     height: 500px;
     border: 2px solid rgb(148, 33, 33);
     box-shadow: 10px -10px rgb(148, 33, 33);
@@ -434,4 +415,31 @@ footer span{
     .pokedexRightRefletion{
         width: 380px;
     }
+    .pokedexRight{
+        grid-column: 2/3;
+        grid-row: 1/3;
+        width: 57px;
+        height: 96%;
+        background: rgb(218, 10, 37);
+        margin-top: 20px;
+        margin-left: -2px;
+        border: 2px solid rgb(148, 33, 33);
+        border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+    }
+    .pokedexLine, .pokedexLine2{
+        width: 57px;
+        height: 20px;
+        border: 2px solid rgb(148, 33, 33);
+        
+        margin-left: -2px;
+    }
+    .pokedexLine{
+        margin-top: 40px;
+    }
+    .pokedexLine2{
+        margin-top: 445px;
+    }
+    
 }
