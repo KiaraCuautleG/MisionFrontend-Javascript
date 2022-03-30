@@ -7,6 +7,7 @@
     <title>Pokedex LaunchX</title>
     <link rel="stylesheet" href="./poledex.css">
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/9eea5950a4.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <h1>Pokedex LaunchX</h1>
@@ -47,7 +48,9 @@
                     <div class="bottomButtons">
                         <div class="buttons1">
                             <div class="buttonCircle">
-                                <div></div>
+                                <div>
+                                    <button class="buttonPokemon" onclick="fetchPokemon()"></button>
+                                </div>
                             </div>
                             <div class="rectangle1"></div>
                             <div class="rectangle2"></div>
@@ -58,14 +61,14 @@
                         <div class="directions">
                             <div class="top"></div>
                             <div class="right">
-                                <button class="buttonAfter" onclick="fetchAfter()"></button>
+                                <i onclick="fetchAfter()" class="buttonAfter fa-solid fa-caret-right"></i>
                             </div>
                             <div class="botton"></div>
                             <div class="left">
-                                <button class="buttonBefore" onclick="fetchBefore()"></button>
+                                <i onclick="fetchBefore()" class="buttonBefore fa-solid fa-caret-left"></i>
                             </div>
                             <div class="center">
-                                <button class="buttonPokemon" onclick="fetchPokemon()"></button>
+                                
                             </div>
                         </div>
                     </div>

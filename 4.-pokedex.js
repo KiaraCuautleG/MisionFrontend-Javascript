@@ -77,7 +77,7 @@ const fetchPokemon = () => {
 const fetchAfter =() => {
     
     //console.log(idpo);
-    if(id>= 1 && id<=150){
+    if(id>= 1 && id<=151){
         id = id+1;
         console.log(id);
     }else if(id == 0){
@@ -139,7 +139,7 @@ const fetchAfter =() => {
 const fetchBefore =() => {
     
     //console.log(idpo);
-    if(id>= 1 && id<=150){
+    if(id>= 1 && id<=151){
         id = id-1;
         console.log(id);
         const url = `https://pokeapi.co/api/v2/pokemon/${id}`;
