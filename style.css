@@ -195,25 +195,29 @@ h1{
 .directions .top,.directions .right,.directions .botton,.directions .left, .center{
     width: 40px;
     height: 40px;
-    background: black;
+    background: rgb(56, 54, 54);
     margin-top: 20px;
     margin-left: 30px;
 }
 .directions .top{
     margin-top: 20px;
     margin-left: 30px;
+    box-shadow: -5px 5px black;
 }
 .directions .right{
     margin-top: 0px;
     margin-left: 70px;
+    box-shadow: -5px 5px black;
 }
 .directions .botton{
     margin-top: 0px;
     margin-left: 30px;
+    box-shadow: -5px 0px black;
 }
 .directions .left{
     margin-top: -80px;
     margin-left: -10px;
+    box-shadow: -5px 5px black;
 }
 .directions .center{
     margin-top: -40px;
@@ -229,7 +233,7 @@ h1{
 .buttonAfter, .buttonBefore{
     width: 40px;
     height: 40px;
-    background: black;
+    background: rgb(56, 54, 54);
     border-style: none;
 }
 .pokedexRight{
@@ -358,6 +362,38 @@ h1{
     margin: 5px;
     border-radius: 15px;
 }
+.whitesButtons{
+    width: 150px;
+    height: 50px;
+    display: flex;
+    margin: 20px 0px;
+    border-radius: 5px;
+    box-shadow: -5px 5px rgb(138, 129, 129);
+}
+.whitesButtons div{
+    width: 70px;
+    height: 50px;
+    background: #ffff;
+    border: 1px solid  rgb(138, 129, 129);
+    
+}
+.whitesButtons div:first-child{
+    border-radius: 5px 0px 0px 5px;   
+}
+.whitesButtons div:nth-child(2){
+    border-radius: 0px 5px 5px 0px; 
+}
+.fourDiv{
+    display: flex;
+}
+.circleYellow{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: rgb(155, 155, 11);
+    margin-top: 30px;
+    margin-left: 100px;
+}
 .weightPoke{
     width: 300px;
     height: 30px;
@@ -371,6 +407,12 @@ h1{
 .weightPoke span{
     margin: 5px;
     margin-top: 15px;
+}
+footer span{
+    color: yellow;
+    font-size: 20px;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
 }
 @media screen and (min-width:724px){
     section{
