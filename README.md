@@ -1,2 +1,3 @@
 # MisionFrontend-Javascript
-Pokedex realizada con Javascript, css y HTML, se consumio la API de https://pokeapi.co/
+Pokedex realizada con Javascript, css y HTML, link de página https://kiaracuautleg.github.io/MisionFrontend-Javascript/
+
